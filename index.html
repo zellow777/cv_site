@@ -94,6 +94,24 @@
       background: #ffffff;
       border-color: rgba(0,0,0,.06);
     }
+    .certs { margin-top: 28px; }
+    .certs-title { margin: 0 0 12px; font-size: 15px; text-transform: uppercase; letter-spacing: .3px; color: var(--muted); }
+    .certs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+    .cert-card { display: flex; align-items: center; gap: 12px; padding: 14px 16px; border-radius: 18px; background: rgba(8,11,18,.65); border: 1px solid rgba(255,255,255,.08); box-shadow: 0 12px 28px rgba(8,11,18,.35); }
+    .cert-icon { width: 52px; height: 52px; border-radius: 16px; display: grid; place-items: center; color: #ffffff; }
+    .cert-icon svg { width: 28px; height: 28px; }
+    .cert-icon.azure { background: linear-gradient(135deg, #2563eb, #38bdf8); }
+    .cert-icon.data { background: linear-gradient(135deg, #7c3aed, #c026d3); }
+    .cert-icon.ai { background: linear-gradient(135deg, #8b5cf6, #22d3ee); }
+    .cert-icon.powerbi { background: linear-gradient(135deg, #f97316, #facc15); }
+    .cert-icon.fabric { background: linear-gradient(135deg, #14b8a6, #06b6d4); }
+    .cert-meta { display: flex; flex-direction: column; gap: 4px; }
+    .cert-title { font-weight: 600; letter-spacing: .1px; color: var(--text); }
+    .cert-code { color: var(--muted); font-size: 13px; text-transform: uppercase; letter-spacing: .5px; }
+    @media (prefers-color-scheme: light) {
+      :root:not([data-theme]) .cert-card { background: rgba(255,255,255,.92); border-color: rgba(15,23,42,.06); box-shadow: 0 12px 24px rgba(15,23,42,.15); }
+    }
+    :root[data-theme="light"] .cert-card { background: rgba(255,255,255,.92); border-color: rgba(15,23,42,.06); box-shadow: 0 12px 24px rgba(15,23,42,.15); }
     .card h3 { margin: 6px 0 8px; font-size: 18px; }
     .small { color: var(--muted); font-size: 14px; }
 
@@ -154,35 +172,37 @@
     </main>
 
     <section id="work">
-      <h2 class="section-title">Selected Work</h2>
+      <h2 class="section-title">Professional Experience</h2>
       <div class="cardgrid">
         <article class="card">
-          <h3>Microsoft Fabric Sustainability Platform</h3>
-          <p class="small">Designed and scaled a sustainability data platform for a global manufacturer: ingestion to Lakehouse, transformations, Direct Lake semantic models, data-quality pipelines, and governed reporting in Power BI.</p>
+          <div class="small">2025 Jan – Present · Accenture</div>
+          <h3>Data Engineer</h3>
           <ul class="small">
-          <li>Great Expectations suites for row/table checks</li>
-          <li>Semantic models via API, RLS roles</li>
-          <li>Optimized CU consumption, shortcuts across workspaces</li>
-        </ul>
-          <p><a href="#">Case study →</a> · <a href="https://github.com/your-handle/real-estate-analytics">GitHub</a></p>
+            <li>Developed Python scripts for data preparation and transformation, ensuring clean and usable data for business intelligence applications.</li>
+            <li>Conducted in-depth data analysis and developed business intelligence dashboards with Power BI, providing actionable insights for decision-making.</li>
+            <li>Helped in architecture design for cloud solutions using Microsoft Azure.</li>
+            <li>Collaborated with cross-functional teams to design and deploy machine learning AI models using TensorFlow or Azure AI Studio, driving innovation in client projects.</li>
+            <li>Developed and maintained custom software solutions using Python.</li>
+            <li>Facilitated workshops and training sessions to upskill client teams in the latest technologies and best practices.</li>
+            <li>Wrote SQL scripts and stored procedures for data manipulation and extraction, optimizing database performance for BI use cases.</li>
+            <li>Created proof-of-concepts using Azure Data and AI solutions while staying current with the latest Azure services and technologies.</li>
+            <li>Organized and facilitated meetings, ensuring clear communication and alignment between all stakeholders.</li>
+          </ul>
         </article>
         <article class="card">
-          <h3>Real‑Estate Analytics (HU)</h3>
-          <p class="small">Ingests listings → cleans & deduplicates → price‑per‑sqm insights and geospatial heatmaps. Fabric notebooks, Delta tables, and Power BI dashboards.</p>
-          <p class="small"><strong>Stack:</strong> Fabric, PySpark, Delta, Power BI</p>
-          <p><a href="#">Case study →</a> · <a href="https://github.com/your-handle/real-estate-analytics">GitHub</a></p>
-        </article>
-        <article class="card">
-          <h3>Data Quality Framework</h3>
-          <p class="small">Reusable expectations, validation reports, and issue tables integrated with pipelines; alerts on failures and blank/zero scenarios.</p>
-          <p class="small"><strong>Stack:</strong> Great Expectations, PySpark, Fabric Pipelines</p>
-          <p><a href="#">Case study →</a></p>
-        </article>
-        <article class="card">
-          <h3>Power BI Semantic Models</h3>
-          <p class="small">Direct Lake models with relationships, measures, and RLS; deployed via automated APIs and YAML.</p>
-          <p class="small"><strong>Stack:</strong> SemPy Labs, Power BI, Fabric APIs</p>
-          <p><a href="#">Case study →</a></p>
+          <div class="small">2023 Mar – 2024 Dec · Ernst &amp; Young</div>
+          <h3>Technology Consultant</h3>
+          <ul class="small">
+            <li>Developed Python scripts for data preparation and transformation, ensuring clean and usable data for business intelligence applications.</li>
+            <li>Conducted in-depth data analysis and developed business intelligence dashboards with Power BI, providing actionable insights for decision-making.</li>
+            <li>Helped in architecture design for cloud solutions using Microsoft Azure.</li>
+            <li>Collaborated with cross-functional teams to design and deploy machine learning AI models using TensorFlow or Azure AI Studio, driving innovation in client projects.</li>
+            <li>Developed and maintained custom software solutions using Python.</li>
+            <li>Facilitated workshops and training sessions to upskill client teams in the latest technologies and best practices.</li>
+            <li>Wrote SQL scripts and stored procedures for data manipulation and extraction, optimizing database performance for BI use cases.</li>
+            <li>Created proof-of-concepts using Azure Data and AI solutions while staying current with the latest Azure services and technologies.</li>
+            <li>Organized and facilitated meetings, ensuring clear communication and alignment between all stakeholders.</li>
+          </ul>
         </article>
       </div>
     </section>
@@ -202,8 +222,112 @@
           <h3>Analytics</h3>
           <p class="small">Power BI (Direct Lake), DAX, SemPy, Visualization</p>
         </div>
+        <div class="card">
+          <h3>AI &amp; ML</h3>
+          <p class="small">Machine Learning, Azure AI Studio, TensorFlow, MLOps practices, Responsible AI</p>
+        </div>
       </div>
-      <p class="small" style="margin-top:12px">Certs: AZ‑104 · AZ‑305 · AZ‑900 · AI‑900 · AI‑102 · DP‑900 · DP‑203 · PL‑300</p>
+      <div class="certs">
+        <p class="certs-title">Certifications</p>
+        <div class="certs-grid">
+          <article class="cert-card">
+            <span class="cert-icon azure">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6" opacity="0.6" />
+                <path d="M9.3 12.4 11.3 14.4 15 10.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+            <div class="cert-meta">
+              <span class="cert-title">Azure Fundamentals</span>
+              <span class="cert-code">AZ-900</span>
+            </div>
+          </article>
+          <article class="cert-card">
+            <span class="cert-icon data">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6" opacity="0.6" />
+                <path d="M9.3 12.4 11.3 14.4 15 10.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+            <div class="cert-meta">
+              <span class="cert-title">Azure Data Fundamentals</span>
+              <span class="cert-code">DP-900</span>
+            </div>
+          </article>
+          <article class="cert-card">
+            <span class="cert-icon data">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6" opacity="0.6" />
+                <path d="M9.3 12.4 11.3 14.4 15 10.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+            <div class="cert-meta">
+              <span class="cert-title">Azure Data Engineer Associate</span>
+              <span class="cert-code">DP-203</span>
+            </div>
+          </article>
+          <article class="cert-card">
+            <span class="cert-icon ai">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6" opacity="0.6" />
+                <path d="M9.3 12.4 11.3 14.4 15 10.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+            <div class="cert-meta">
+              <span class="cert-title">Azure AI Fundamentals</span>
+              <span class="cert-code">AI-900</span>
+            </div>
+          </article>
+          <article class="cert-card">
+            <span class="cert-icon ai">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6" opacity="0.6" />
+                <path d="M9.3 12.4 11.3 14.4 15 10.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+            <div class="cert-meta">
+              <span class="cert-title">Azure AI Engineer Associate</span>
+              <span class="cert-code">AI-102</span>
+            </div>
+          </article>
+          <article class="cert-card">
+            <span class="cert-icon powerbi">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6" opacity="0.6" />
+                <path d="M9.3 12.4 11.3 14.4 15 10.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+            <div class="cert-meta">
+              <span class="cert-title">Power BI Data Analyst Associate</span>
+              <span class="cert-code">PL-300</span>
+            </div>
+          </article>
+          <article class="cert-card">
+            <span class="cert-icon azure">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6" opacity="0.6" />
+                <path d="M9.3 12.4 11.3 14.4 15 10.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+            <div class="cert-meta">
+              <span class="cert-title">Azure Administrator Associate</span>
+              <span class="cert-code">AZ-104</span>
+            </div>
+          </article>
+          <article class="cert-card">
+            <span class="cert-icon fabric">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6" opacity="0.6" />
+                <path d="M9.3 12.4 11.3 14.4 15 10.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+            <div class="cert-meta">
+              <span class="cert-title">Fabric Data Engineer Associate</span>
+              <span class="cert-code">DP-700</span>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
 
     <section id="contact">
