@@ -3,111 +3,225 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dávid Mihályi — Data Engineer & Consultant</title>
-  <meta name="description" content="Data Engineer and Technology Consultant specializing in Azure, Fabric, Python, and BI solutions." />
+  <title>Dávid Mihályi — Data Engineer</title>
+  <meta name="description" content="Data Engineer specialized in Microsoft Fabric, Azure, and reliable data platforms." />
   <!-- Open Graph -->
-  <meta property="og:title" content="Dávid Mihályi — Data Engineer & Consultant" />
-  <meta property="og:description" content="Azure • Fabric • Python • BI • Data Engineering • AI" />
+  <meta property="og:title" content="Dávid Mihályi — Data Engineer" />
+  <meta property="og:description" content="Microsoft Fabric • Azure • PySpark • Data Quality • Power BI" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://your-domain.example" />
   <meta property="og:image" content="/og-image.png" />
   <!-- Favicon (optional) -->
   <link rel="icon" href="/favicon.ico" />
+  <!-- Theme color -->
   <meta name="theme-color" content="#0ea5e9" />
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Dávid Mihályi",
+    "jobTitle": "Data Engineer",
+    "url": "https://your-domain.example",
+    "sameAs": [
+      "https://www.linkedin.com/in/your-handle",
+      "https://github.com/your-handle"
+    ]
+  }
+  </script>
+  <style>
+    :root {
+      --bg: #0b0c10;
+      --panel: #111317;
+      --muted: #9aa4b2;
+      --text: #e6edf3;
+      --accent: #0ea5e9; /* sky-500 */
+      --accent-2: #22c55e; /* green-500 */
+      --ring: rgba(14,165,233,0.5);
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f7f8fa;
+        --panel: #ffffff;
+        --muted: #4b5563;
+        --text: #0f172a;
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      background: radial-gradient(1200px 600px at 80% -10%, rgba(14,165,233,0.12), transparent),
+                  radial-gradient(800px 400px at -10% 0%, rgba(34,197,94,0.10), transparent),
+                  var(--bg);
+      color: var(--text);
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 1000px; margin: 0 auto; padding: 24px; }
+    header { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 700; letter-spacing: .2px; }
+    .brand .dot { width: 10px; height: 10px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--accent-2)); box-shadow: 0 0 0 3px var(--ring); }
+    .nav a { margin-left: 16px; font-weight: 600; color: var(--text); opacity: .8; }
+    .nav a:hover { opacity: 1; }
+
+    .hero { display: grid; grid-template-columns: 1.2fr .8fr; gap: 28px; align-items: center; margin-top: 40px; }
+    @media (max-width: 900px){ .hero { grid-template-columns: 1fr; } }
+    h1 { font-size: clamp(28px, 5vw, 44px); line-height: 1.1; margin: 0 0 10px; }
+    .subtitle { font-size: clamp(16px, 2.2vw, 20px); color: var(--muted); margin: 0 0 22px; }
+    .badges { display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0 26px; }
+    .badge { padding: 8px 12px; border: 1px solid rgba(255,255,255,.08); background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02)); border-radius: 999px; font-size: 13px; color: var(--text); }
+
+    .cta { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 14px; border-radius: 12px; border: 1px solid rgba(255,255,255,.08); background: var(--panel); color: var(--text); font-weight: 700; }
+    .btn:hover { filter: brightness(1.05); transform: translateY(-1px); transition: .2s ease; }
+    .btn.primary { background: linear-gradient(135deg, var(--accent), var(--accent-2)); border: none; color: white; }
+
+    .cardgrid { display:grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+    @media (max-width: 900px){ .cardgrid { grid-template-columns: 1fr; } }
+    .card { background: rgba(0,0,0,.25); border: 1px solid rgba(255,255,255,.08); border-radius: 16px; padding: 16px; backdrop-filter: blur(6px); }
+    @media (prefers-color-scheme: light) { .card { background: #ffffff; border-color: rgba(0,0,0,.06);} }
+    .card h3 { margin: 6px 0 8px; font-size: 18px; }
+    .small { color: var(--muted); font-size: 14px; }
+
+    section { margin: 56px 0; }
+    .section-title { font-size: 20px; letter-spacing: .3px; margin: 0 0 12px; }
+
+    footer { margin: 56px 0 12px; color: var(--muted); font-size: 14px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+
+    /* Toggle */
+    .toggle { border: 1px solid rgba(255,255,255,.12); background: var(--panel); padding: 6px 10px; border-radius: 999px; font-size: 13px; }
+    .hidden { display:none; }
+  </style>
 </head>
 <body>
   <div class="container">
     <header>
       <div class="brand"><span class="dot"></span> <span>Dávid Mihályi</span></div>
       <nav class="nav">
-        <a href="#work">Experience</a>
+        <a href="#work">Work</a>
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
+        <button id="modeBtn" class="toggle" aria-label="Toggle theme">🌗 Theme</button>
       </nav>
     </header>
 
     <main class="hero">
       <div>
-        <h1>Data Engineer & Technology Consultant</h1>
-        <p class="subtitle">Azure • Microsoft Fabric • Python • SQL • Power BI • AI/ML</p>
+        <h1>Data Engineer building reliable, usable data platforms.</h1>
+        <p class="subtitle">Microsoft Fabric • Azure • PySpark • Delta Lake • Power BI • Data Quality (Great Expectations)</p>
         <div class="badges">
-          <span class="badge">Cloud Solutions (Azure, Fabric)</span>
-          <span class="badge">Business Intelligence</span>
-          <span class="badge">Machine Learning & AI</span>
-          <span class="badge">Data Engineering & ETL</span>
+          <span class="badge">Lakehouse: Bronze → Silver → Gold</span>
+          <span class="badge">Semantic Models (Direct Lake)</span>
+          <span class="badge">CI/CD & DevOps</span>
+          <span class="badge">Data Contracts & Validation</span>
         </div>
         <div class="cta">
-          <a class="btn primary" href="/cv-david-mihalyi.pdf" download>Download CV</a>
-          <a class="btn" href="#work">View Experience</a>
+          <a class="btn primary" href="/cv-david-mihalyi.pdf" download>
+            <!-- download icon -->
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v10m0 0l4-4m-4 4L8 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Download CV
+          </a>
+          <a class="btn" href="#work">View Projects</a>
           <a class="btn" href="#contact">Get in Touch</a>
         </div>
+      </div>
+      <div class="card">
+        <div class="small">Featured</div>
+        <h3>Microsoft Fabric Sustainability Platform</h3>
+        <p class="small">Designed and scaled a sustainability data platform for a global manufacturer: ingestion to Lakehouse, transformations, Direct Lake semantic models, data-quality pipelines, and governed reporting in Power BI.</p>
+        <ul class="small">
+          <li>Great Expectations suites for row/table checks</li>
+          <li>Semantic models via API, RLS roles</li>
+          <li>Optimized CU consumption, shortcuts across workspaces</li>
+        </ul>
       </div>
     </main>
 
     <section id="work">
-      <h2>Professional Experience</h2>
+      <h2 class="section-title">Selected Work</h2>
       <div class="cardgrid">
         <article class="card">
-          <h3>Technology Consultant — Ernst & Young</h3>
-          <p class="small">Jan 2025 – Present</p>
-          <p class="small">- Data preparation & transformation with Python<br>
-          - BI dashboards in Power BI<br>
-          - Architecture design for Azure cloud solutions<br>
-          - AI/ML model deployment (Azure AI Studio, TensorFlow)<br>
-          - Training & workshops for client teams</p>
+          <h3>Real‑Estate Analytics (HU)</h3>
+          <p class="small">Ingests listings → cleans & deduplicates → price‑per‑sqm insights and geospatial heatmaps. Fabric notebooks, Delta tables, and Power BI dashboards.</p>
+          <p class="small"><strong>Stack:</strong> Fabric, PySpark, Delta, Power BI</p>
+          <p><a href="#">Case study →</a> · <a href="https://github.com/your-handle/real-estate-analytics">GitHub</a></p>
         </article>
         <article class="card">
-          <h3>Data Engineer — Accenture</h3>
-          <p class="small">Mar 2023 – Dec 2024</p>
-          <p class="small">- Developed Python scripts for clean BI data<br>
-          - Built Power BI dashboards for decision-making<br>
-          - Cloud solution architecture (Azure)<br>
-          - SQL scripting & database optimization<br>
-          - POCs using Azure Data & AI services</p>
+          <h3>Data Quality Framework</h3>
+          <p class="small">Reusable expectations, validation reports, and issue tables integrated with pipelines; alerts on failures and blank/zero scenarios.</p>
+          <p class="small"><strong>Stack:</strong> Great Expectations, PySpark, Fabric Pipelines</p>
+          <p><a href="#">Case study →</a></p>
+        </article>
+        <article class="card">
+          <h3>Power BI Semantic Models</h3>
+          <p class="small">Direct Lake models with relationships, measures, and RLS; deployed via automated APIs and YAML.</p>
+          <p class="small"><strong>Stack:</strong> SemPy Labs, Power BI, Fabric APIs</p>
+          <p><a href="#">Case study →</a></p>
         </article>
       </div>
     </section>
 
     <section id="skills">
-      <h2>Skills & Certifications</h2>
+      <h2 class="section-title">Skills & Certifications</h2>
       <div class="cardgrid">
         <div class="card">
-          <h3>Programming</h3>
-          <p class="small">Python, JavaScript, Java, SQL</p>
+          <h3>Cloud & Platform</h3>
+          <p class="small">Azure, Microsoft Fabric, Databricks, Synapse</p>
         </div>
         <div class="card">
-          <h3>Data & Analytics</h3>
-          <p class="small">Power BI, SAP SAC, Data Analysis, Data Engineering, Machine Learning, AI</p>
+          <h3>Data Engineering</h3>
+          <p class="small">PySpark, SQL, Delta Lake, Data Modeling, CI/CD</p>
         </div>
         <div class="card">
-          <h3>Cloud & Platforms</h3>
-          <p class="small">Azure, Microsoft Fabric, Web Development, Database Management</p>
+          <h3>Analytics</h3>
+          <p class="small">Power BI (Direct Lake), DAX, SemPy, Visualization</p>
         </div>
       </div>
-      <p class="small" style="margin-top:12px">Certifications: AZ-900 · DP-900 · DP-203 · AI-900 · AI-102 · PL-300 · AZ-104 · AZ-305 · DP-700</p>
+      <p class="small" style="margin-top:12px">Certs: AZ‑104 · AZ‑305 · AZ‑900 · AI‑900 · AI‑102 · DP‑900 · DP‑203 · PL‑300</p>
     </section>
 
     <section id="contact">
-      <h2>Contact</h2>
+      <h2 class="section-title">Contact</h2>
       <div class="card">
-        <p class="small">Open to data engineering and consulting opportunities. Let’s connect:</p>
+        <p class="small">Open to data engineering and analytics projects. For inquiries, collaborations, or coffee: </p>
         <p>
-          <a href="mailto:mihalyi.david@icloud.com" class="btn">Email</a>
-          <a href="https://www.linkedin.com/in/davidmihalyi/" class="btn">LinkedIn</a>
+          <a href="mailto:email@your-domain.example" class="btn">Email</a>
+          <a href="https://www.linkedin.com/in/your-handle" class="btn">LinkedIn</a>
           <a href="https://github.com/your-handle" class="btn">GitHub</a>
         </p>
-        <p class="small">Phone: +36-30-231-5705</p>
       </div>
     </section>
 
     <footer>
       <span>© <span id="year"></span> Dávid Mihályi</span>
-      <span class="small">Built with HTML/CSS • Hosted on GitHub Pages</span>
+      <span class="small">Built with plain HTML/CSS • Hosted on GitHub Pages</span>
     </footer>
   </div>
 
   <script>
+    // Year
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Theme toggle (light/dark) using data-theme attribute and localStorage
+    const btn = document.getElementById('modeBtn');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const saved = localStorage.getItem('theme');
+
+    function apply(theme){
+      if(theme === 'light') document.documentElement.style.filter = 'invert(1) hue-rotate(180deg)';
+      else document.documentElement.style.filter = '';
+      document.documentElement.dataset.theme = theme;
+      localStorage.setItem('theme', theme);
+    }
+
+    let current = saved || (prefersDark ? 'dark' : 'light');
+    apply(current);
+
+    btn.addEventListener('click', () => {
+      current = current === 'dark' ? 'light' : 'dark';
+      apply(current);
+    });
   </script>
 </body>
 </html>
