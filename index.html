@@ -66,10 +66,11 @@
     a:hover { text-decoration: underline; }
     .container { max-width: 1000px; margin: 0 auto; padding: 24px; }
     header { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .nav { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
     .brand { display: flex; align-items: center; gap: 12px; font-weight: 700; letter-spacing: .2px; }
     .brand .dot { width: 10px; height: 10px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--accent-2)); box-shadow: 0 0 0 3px var(--ring); }
-    .nav a { margin-left: 16px; font-weight: 600; color: var(--text); opacity: .8; }
-    .nav a:hover { opacity: 1; }
+    .nav a { font-weight: 600; color: var(--text); opacity: .8; padding: 6px 0; border-bottom: 2px solid transparent; transition: opacity .2s ease, border-color .2s ease; }
+    .nav a:hover { opacity: 1; border-color: var(--accent); }
 
     .hero { display: grid; grid-template-columns: 1.2fr .8fr; gap: 28px; align-items: center; margin-top: 40px; }
     @media (max-width: 900px){ .hero { grid-template-columns: 1fr; } }
@@ -112,6 +113,30 @@
       :root:not([data-theme]) .cert-card { background: rgba(255,255,255,.92); border-color: rgba(15,23,42,.06); box-shadow: 0 12px 24px rgba(15,23,42,.15); }
     }
     :root[data-theme="light"] .cert-card { background: rgba(255,255,255,.92); border-color: rgba(15,23,42,.06); box-shadow: 0 12px 24px rgba(15,23,42,.15); }
+    .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; margin-top: 16px; }
+    .embed-card { background: rgba(8,11,18,.65); border-radius: 18px; border: 1px solid rgba(255,255,255,.08); padding: 18px; backdrop-filter: blur(8px); box-shadow: 0 12px 28px rgba(8,11,18,.35); display: flex; flex-direction: column; gap: 14px; }
+    .embed-title { margin: 0; font-size: 18px; }
+    .embed-desc { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.5; }
+    .embed-frame { border: none; border-radius: 14px; width: 100%; aspect-ratio: 16/10; background: rgba(15,23,42,.4); }
+    .embed-placeholder { display: grid; place-items: center; height: 100%; color: var(--muted); font-size: 13px; padding: 12px; text-align: center; }
+    .embed-chat { display: flex; flex-direction: column; padding: 16px; gap: 12px; }
+    .chat-log { flex: 1; overflow-y: auto; border-radius: 10px; padding: 12px; background: rgba(15,23,42,.55); font-size: 13px; line-height: 1.6; }
+    .chat-input { display: flex; gap: 8px; }
+    .chat-input input { flex: 1; padding: 10px 12px; border-radius: 999px; border: 1px solid rgba(148,163,184,0.35); background: rgba(15,23,42,.6); color: var(--text); }
+    .chat-input button { padding: 10px 16px; border-radius: 999px; border: none; background: linear-gradient(135deg, var(--accent), var(--accent-2)); font-weight: 600; color: #04111e; cursor: pointer; }
+    .chat-input button:hover { filter: brightness(1.05); }
+    @media (prefers-color-scheme: light) {
+      :root:not([data-theme]) .chat-log { background: rgba(15,23,42,.06); }
+      :root:not([data-theme]) .chat-input input { background: rgba(148,163,184,.12); border-color: rgba(148,163,184,.35); color: var(--text); }
+    }
+    :root[data-theme="light"] .chat-log { background: rgba(15,23,42,.06); }
+    :root[data-theme="light"] .chat-input input { background: rgba(148,163,184,.12); border-color: rgba(148,163,184,.35); color: var(--text); }
+    @media (prefers-color-scheme: light) {
+      :root:not([data-theme]) .embed-card { background: rgba(255,255,255,.95); border-color: rgba(15,23,42,.08); box-shadow: 0 12px 24px rgba(15,23,42,.12); }
+      :root:not([data-theme]) .embed-frame { background: rgba(15,23,42,.08); }
+    }
+    :root[data-theme="light"] .embed-card { background: rgba(255,255,255,.95); border-color: rgba(15,23,42,.08); box-shadow: 0 12px 24px rgba(15,23,42,.12); }
+    :root[data-theme="light"] .embed-frame { background: rgba(15,23,42,.08); }
     .card h3 { margin: 6px 0 8px; font-size: 18px; }
     .small { color: var(--muted); font-size: 14px; }
 
@@ -138,6 +163,10 @@
     <header>
       <div class="brand"><span class="dot"></span> <span>Dávid Mihályi</span></div>
       <nav class="nav">
+        <a href="#work">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
         <button id="modeBtn" class="toggle" aria-label="Toggle theme">🌗 Theme</button>
       </nav>
     </header>
@@ -155,12 +184,10 @@
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v10m0 0l4-4m-4 4L8 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             Download CV
           </a>
-          <a class="btn" href="#work">View Projects</a>
-          <a class="btn" href="#contact">Get in Touch</a>
         </div>
       </div>
       <div class="card">
-        <div class="small">Featured</div>
+        <div class="small">Projects I'm currently working on</div>
         <h3>Microsoft Fabric Sustainability Platform</h3>
         <p class="small">Designed and scaled a sustainability data platform for a global manufacturer: ingestion to Lakehouse, transformations, Direct Lake semantic models, data-quality pipelines, and governed reporting in Power BI.</p>
         <ul class="small">
@@ -330,6 +357,40 @@
       </div>
     </section>
 
+    <section id="portfolio">
+      <h2 class="section-title">Portfolio Playground</h2>
+      <p class="small">Explore live notebooks, interactive reports, and an experimental RAG assistant that mirror how I build, validate, and explain data products.</p>
+      <div class="portfolio-grid">
+        <article class="embed-card">
+          <h3 class="embed-title">Streaming Quality Monitoring Notebook</h3>
+          <p class="embed-desc">A Fabric notebook that ingests event streams, flags quality regressions with Great Expectations, and surfaces fixes via Delta tables.</p>
+          <iframe class="embed-frame" src="https://nbviewer.org/github/zellow777/portfolio-notebooks/blob/main/streaming-quality-monitoring.ipynb" title="Streaming quality monitoring notebook" loading="lazy"></iframe>
+          <p class="small" style="margin:0;color:var(--muted);">Replace the link above with your published notebook viewer URL when ready.</p>
+        </article>
+        <article class="embed-card">
+          <h3 class="embed-title">Executive Fabric Scorecard</h3>
+          <p class="embed-desc">Power BI Direct Lake dashboard tracking sustainability KPIs, CU consumption, and data quality SLAs.</p>
+          <iframe class="embed-frame" src="https://app.powerbi.com/view?r=YOUR-REPORT-ID" title="Power BI sustainability scorecard" loading="lazy" allowfullscreen></iframe>
+          <p class="small" style="margin:0;color:var(--muted);">Authenticate with Power BI or swap in your embed token URL to activate.</p>
+        </article>
+        <article class="embed-card">
+          <h3 class="embed-title">Fabric Knowledge RAG Chat</h3>
+          <p class="embed-desc">Prototype assistant that answers stakeholder questions from curated Fabric playbooks and architecture notes.</p>
+          <div class="embed-frame embed-chat">
+            <div class="chat-log" id="ragLog">
+              <p><strong>Lead:</strong> How quickly can we onboard a new data domain?</p>
+              <p><strong>RAG Assistant:</strong> The ingestion bootstrap takes ~3 days with our template pipelines. Day 1 provisioning, day 2 quality baselines, day 3 semantic model + dashboards.</p>
+            </div>
+            <form class="chat-input" id="ragForm">
+              <input type="text" id="ragInput" name="question" placeholder="Ask about architecture, governance, or delivery..." autocomplete="off" />
+              <button type="submit">Send</button>
+            </form>
+            <div class="small" style="margin:0;color:var(--muted);">Hook this widget up to your RAG endpoint by posting the prompt and streaming the response.</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
     <section id="contact">
       <h2 class="section-title">Contact</h2>
       <div class="card">
@@ -371,6 +432,26 @@
       current = current === 'dark' ? 'light' : 'dark';
       apply(current);
     });
+
+    const ragForm = document.getElementById('ragForm');
+    if(ragForm){
+      ragForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const input = document.getElementById('ragInput');
+        const log = document.getElementById('ragLog');
+        if(!input || !log) return;
+        const question = input.value.trim();
+        if(!question) return;
+        const userBubble = document.createElement('p');
+        userBubble.innerHTML = `<strong>You:</strong> ${question}`;
+        log.appendChild(userBubble);
+        const response = document.createElement('p');
+        response.innerHTML = '<strong>RAG Assistant:</strong> Demo response placeholder — connect this form to your retrieval endpoint to stream answers.';
+        log.appendChild(response);
+        log.scrollTop = log.scrollHeight;
+        input.value = '';
+      });
+    }
   </script>
 </body>
 </html>
