@@ -62,8 +62,6 @@
     header { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
     .brand { display: flex; align-items: center; gap: 12px; font-weight: 700; letter-spacing: .2px; }
     .brand .dot { width: 10px; height: 10px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--accent-2)); box-shadow: 0 0 0 3px var(--ring); }
-    .nav a { margin-left: 16px; font-weight: 600; color: var(--text); opacity: .8; }
-    .nav a:hover { opacity: 1; }
 
     .hero { display: grid; grid-template-columns: 1.2fr .8fr; gap: 28px; align-items: center; margin-top: 40px; }
     @media (max-width: 900px){ .hero { grid-template-columns: 1fr; } }
@@ -96,12 +94,6 @@
   <div class="container">
     <header>
       <div class="brand"><span class="dot"></span> <span>Dávid Mihályi</span></div>
-      <nav class="nav">
-        <a href="#work">Work</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-        <button id="modeBtn" class="toggle" aria-label="Toggle theme">🌗 Theme</button>
-      </nav>
     </header>
 
     <main class="hero">
