@@ -40,12 +40,18 @@
       --ring: rgba(14,165,233,0.5);
     }
     @media (prefers-color-scheme: light) {
-      :root {
+      :root:not([data-theme]) {
         --bg: #f7f8fa;
         --panel: #ffffff;
         --muted: #4b5563;
         --text: #0f172a;
       }
+    }
+    :root[data-theme="light"] {
+      --bg: #f7f8fa;
+      --panel: #ffffff;
+      --muted: #4b5563;
+      --text: #0f172a;
     }
     * { box-sizing: border-box; }
     html, body { height: 100%; }
@@ -78,7 +84,16 @@
     .cardgrid { display:grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
     @media (max-width: 900px){ .cardgrid { grid-template-columns: 1fr; } }
     .card { background: rgba(0,0,0,.25); border: 1px solid rgba(255,255,255,.08); border-radius: 16px; padding: 16px; backdrop-filter: blur(6px); }
-    @media (prefers-color-scheme: light) { .card { background: #ffffff; border-color: rgba(0,0,0,.06);} }
+    @media (prefers-color-scheme: light) {
+      :root:not([data-theme]) .card {
+        background: #ffffff;
+        border-color: rgba(0,0,0,.06);
+      }
+    }
+    :root[data-theme="light"] .card {
+      background: #ffffff;
+      border-color: rgba(0,0,0,.06);
+    }
     .card h3 { margin: 6px 0 8px; font-size: 18px; }
     .small { color: var(--muted); font-size: 14px; }
 
@@ -88,7 +103,15 @@
     footer { margin: 56px 0 12px; color: var(--muted); font-size: 14px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
 
     /* Toggle */
-    .toggle { border: 1px solid rgba(255,255,255,.12); background: var(--panel); padding: 6px 10px; border-radius: 999px; font-size: 13px; }
+    .toggle {
+      border: none;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+      box-shadow: 0 8px 20px rgba(14,165,233,0.35);
+    }
     .hidden { display:none; }
   </style>
 </head>
@@ -211,9 +234,9 @@
     const saved = localStorage.getItem('theme');
 
     function apply(theme){
-      if(theme === 'light') document.documentElement.style.filter = 'invert(1) hue-rotate(180deg)';
-      else document.documentElement.style.filter = '';
+      document.documentElement.style.removeProperty('filter');
       document.documentElement.dataset.theme = theme;
+      btn.style.color = theme === 'dark' ? '#000000' : '#ffffff';
       localStorage.setItem('theme', theme);
     }
 
