@@ -221,18 +221,24 @@
     }
     :root[data-theme="light"] .embed-card { background: rgba(255,255,255,.95); border-color: rgba(15,23,42,.08); box-shadow: 0 12px 24px rgba(15,23,42,.12); }
     :root[data-theme="light"] .embed-frame { background: rgba(15,23,42,.08); }
-    .schedule-card { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; align-items: stretch; padding: 28px; }
-    .schedule-info { display: flex; flex-direction: column; gap: 16px; }
-    .schedule-info p { margin: 0; color: var(--muted); line-height: 1.6; }
+    .schedule-card { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 24px; align-items: stretch; padding: 32px; }
+    .schedule-info { display: flex; flex-direction: column; gap: 18px; }
+    .schedule-info p { margin: 0; color: var(--muted); line-height: 1.65; }
+    .schedule-highlights { display: grid; gap: 12px; }
+    .schedule-highlight { display: flex; align-items: center; gap: 10px; padding: 12px 14px; border-radius: 12px; background: rgba(148,163,184,0.1); color: var(--text); font-size: 14px; }
+    .schedule-highlight svg { width: 18px; height: 18px; color: var(--accent); flex-shrink: 0; }
     .schedule-cta { display: flex; flex-wrap: wrap; gap: 12px; }
     .schedule-cta .btn { padding: 12px 18px; font-size: 14px; border-radius: 999px; }
-    .schedule-frame { min-height: 320px; border-radius: 18px; border: 1px solid rgba(148,163,184,0.22); background: rgba(15,23,42,0.4); }
+    .schedule-frame-wrapper { border-radius: 20px; background: rgba(15,23,42,0.55); border: 1px solid rgba(148,163,184,0.22); box-shadow: inset 0 1px 0 rgba(255,255,255,0.08); overflow: hidden; display: flex; flex-direction: column; }
+    .schedule-frame-header { display: flex; align-items: center; justify-content: space-between; padding: 14px 18px; border-bottom: 1px solid rgba(148,163,184,0.2); }
+    .schedule-frame-header span { font-size: 14px; color: var(--muted); }
+    .schedule-frame { flex: 1; min-height: 340px; border: none; background: transparent; }
     @media (prefers-color-scheme: light) {
       :root:not([data-theme]) .schedule-card { background: rgba(255,255,255,.95); }
-      :root:not([data-theme]) .schedule-frame { background: rgba(15,23,42,0.06); border-color: rgba(148,163,184,0.25); }
+      :root:not([data-theme]) .schedule-frame-wrapper { background: rgba(255,255,255,0.92); border-color: rgba(148,163,184,0.2); box-shadow: inset 0 1px 0 rgba(15,23,42,0.06); }
     }
     :root[data-theme="light"] .schedule-card { background: rgba(255,255,255,.95); }
-    :root[data-theme="light"] .schedule-frame { background: rgba(15,23,42,0.06); border-color: rgba(148,163,184,0.25); }
+    :root[data-theme="light"] .schedule-frame-wrapper { background: rgba(255,255,255,0.92); border-color: rgba(148,163,184,0.2); box-shadow: inset 0 1px 0 rgba(15,23,42,0.06); }
     #work .card { padding: 26px 28px; }
     #work .card ul { margin: 0; padding-left: 20px; display: grid; gap: 8px; }
     #skills .card { min-height: 120px; }
@@ -245,7 +251,8 @@
     }
     @media (max-width: 600px){
       .embed-frame { aspect-ratio: 4/5; }
-      .schedule-card { padding: 22px; }
+      .schedule-card { padding: 24px; }
+      .schedule-frame-wrapper { border-radius: 16px; }
       .schedule-frame { min-height: 280px; }
       .schedule-cta { flex-direction: column; align-items: stretch; }
     }
@@ -604,12 +611,28 @@
         <div class="schedule-info">
           <h3 class="embed-title" style="margin:0">Free 30‑Minute Discovery</h3>
           <p>Pick a slot that works for you and we’ll dive into your Fabric, Databricks, or BI challenges. I’ll review your current setup beforehand so we can spend the call on solutions, not status updates.</p>
+          <div class="schedule-highlights">
+            <div class="schedule-highlight">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Quick discovery of goals, blockers, and success metrics.
+            </div>
+            <div class="schedule-highlight">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 6v6l3 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Follow-up summary with next-step recommendations.
+            </div>
+          </div>
           <div class="schedule-cta">
             <a class="btn primary" href="https://calendar.google.com/calendar/u/0/appointments/schedules/YOUR-SCHEDULE-ID" target="_blank" rel="noopener">Open Google Calendar</a>
             <a class="btn" href="mailto:email@mihalyidavid.com?subject=Discovery%20Call%20Request">Prefer email?</a>
           </div>
         </div>
-        <iframe class="schedule-frame" src="https://calendar.google.com/calendar/embed?src=YOUR_CALENDAR_ID&ctz=Europe/Budapest" title="Google Calendar booking" loading="lazy"></iframe>
+        <div class="schedule-frame-wrapper">
+          <div class="schedule-frame-header">
+            <span>Pick a time · Europe/Budapest</span>
+            <a class="btn" href="https://calendar.google.com/calendar/u/0/appointments/schedules/YOUR-SCHEDULE-ID" target="_blank" rel="noopener" style="padding:8px 14px;font-size:12px;">Open in new tab</a>
+          </div>
+          <iframe class="schedule-frame" src="https://calendar.google.com/calendar/embed?src=YOUR_CALENDAR_ID&ctz=Europe/Budapest" title="Google Calendar booking" loading="lazy"></iframe>
+        </div>
       </div>
       <p class="small" style="margin-top:12px">Replace the Calendar links with your appointment scheduling URL to activate the live booking flow.</p>
     </section>
