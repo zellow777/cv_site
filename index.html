@@ -332,10 +332,10 @@
         </div>
         <nav class="nav" id="siteNav">
           <div class="nav-links">
-            <a href="#work">Experience</a>
-            <a href="#skills">Skills</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#book">Book a Call</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#work">Experience</a>
+          <a href="#skills">Skills</a>
+          <a href="#book">Book a Call</a>
             <a href="#contact">Contact</a>
           </div>
         </nav>
@@ -368,6 +368,40 @@
         </ul>
       </div>
     </main>
+
+    <section id="portfolio">
+      <h2 class="section-title">Portfolio Playground</h2>
+      <p class="small">Explore live notebooks, interactive reports, and an experimental RAG assistant that mirror how I build, validate, and explain data products.</p>
+      <div class="portfolio-grid">
+        <article class="embed-card">
+          <h3 class="embed-title">Streaming Quality Monitoring Notebook</h3>
+          <p class="embed-desc">A Fabric notebook that ingests event streams, flags quality regressions with Great Expectations, and surfaces fixes via Delta tables.</p>
+          <iframe class="embed-frame" src="https://nbviewer.org/github/zellow777/portfolio-notebooks/blob/main/streaming-quality-monitoring.ipynb" title="Streaming quality monitoring notebook" loading="lazy"></iframe>
+          <p class="small" style="margin:0;color:var(--muted);">Replace the link above with your published notebook viewer URL when ready.</p>
+        </article>
+        <article class="embed-card">
+          <h3 class="embed-title">Executive Fabric Scorecard</h3>
+          <p class="embed-desc">Power BI Direct Lake dashboard tracking sustainability KPIs, CU consumption, and data quality SLAs.</p>
+          <iframe class="embed-frame" src="https://app.fabric.microsoft.com/reportEmbed?reportId=34e62563-1292-4560-a865-c2bb28e5932a&autoAuth=true&ctid=67ae8b72-ed21-40c6-8d15-bc8e234865c0" title="Power BI sustainability scorecard" loading="lazy" allowfullscreen></iframe>
+          <p class="small" style="margin:0;color:var(--muted);">Embedded Fabric Power BI report authenticates automatically for signed-in visitors.</p>
+        </article>
+        <article class="embed-card">
+          <h3 class="embed-title">Fabric Knowledge RAG Chat</h3>
+          <p class="embed-desc">Prototype assistant that answers stakeholder questions from curated Fabric playbooks and architecture notes.</p>
+          <div class="embed-frame embed-chat">
+            <div class="chat-log" id="ragLog">
+              <p><strong>Lead:</strong> How quickly can we onboard a new data domain?</p>
+              <p><strong>RAG Assistant:</strong> The ingestion bootstrap takes ~3 days with our template pipelines. Day 1 provisioning, day 2 quality baselines, day 3 semantic model + dashboards.</p>
+            </div>
+            <form class="chat-input" id="ragForm">
+              <input type="text" id="ragInput" name="question" placeholder="Ask about architecture, governance, or delivery..." autocomplete="off" />
+              <button type="submit">Send</button>
+            </form>
+            <div class="small" style="margin:0;color:var(--muted);">Hook this widget up to your RAG endpoint by posting the prompt and streaming the response.</div>
+          </div>
+        </article>
+      </div>
+    </section>
 
     <section id="work">
       <h2 class="section-title">Professional Experience</h2>
@@ -561,40 +595,6 @@
             </div>
           </article>
         </div>
-      </div>
-    </section>
-
-    <section id="portfolio">
-      <h2 class="section-title">Portfolio Playground</h2>
-      <p class="small">Explore live notebooks, interactive reports, and an experimental RAG assistant that mirror how I build, validate, and explain data products.</p>
-      <div class="portfolio-grid">
-        <article class="embed-card">
-          <h3 class="embed-title">Streaming Quality Monitoring Notebook</h3>
-          <p class="embed-desc">A Fabric notebook that ingests event streams, flags quality regressions with Great Expectations, and surfaces fixes via Delta tables.</p>
-          <iframe class="embed-frame" src="https://nbviewer.org/github/zellow777/portfolio-notebooks/blob/main/streaming-quality-monitoring.ipynb" title="Streaming quality monitoring notebook" loading="lazy"></iframe>
-          <p class="small" style="margin:0;color:var(--muted);">Replace the link above with your published notebook viewer URL when ready.</p>
-        </article>
-        <article class="embed-card">
-          <h3 class="embed-title">Executive Fabric Scorecard</h3>
-          <p class="embed-desc">Power BI Direct Lake dashboard tracking sustainability KPIs, CU consumption, and data quality SLAs.</p>
-          <iframe class="embed-frame" src="https://app.fabric.microsoft.com/reportEmbed?reportId=34e62563-1292-4560-a865-c2bb28e5932a&autoAuth=true&ctid=67ae8b72-ed21-40c6-8d15-bc8e234865c0" title="Power BI sustainability scorecard" loading="lazy" allowfullscreen></iframe>
-          <p class="small" style="margin:0;color:var(--muted);">Embedded Fabric Power BI report authenticates automatically for signed-in visitors.</p>
-        </article>
-        <article class="embed-card">
-          <h3 class="embed-title">Fabric Knowledge RAG Chat</h3>
-          <p class="embed-desc">Prototype assistant that answers stakeholder questions from curated Fabric playbooks and architecture notes.</p>
-          <div class="embed-frame embed-chat">
-            <div class="chat-log" id="ragLog">
-              <p><strong>Lead:</strong> How quickly can we onboard a new data domain?</p>
-              <p><strong>RAG Assistant:</strong> The ingestion bootstrap takes ~3 days with our template pipelines. Day 1 provisioning, day 2 quality baselines, day 3 semantic model + dashboards.</p>
-            </div>
-            <form class="chat-input" id="ragForm">
-              <input type="text" id="ragInput" name="question" placeholder="Ask about architecture, governance, or delivery..." autocomplete="off" />
-              <button type="submit">Send</button>
-            </form>
-            <div class="small" style="margin:0;color:var(--muted);">Hook this widget up to your RAG endpoint by posting the prompt and streaming the response.</div>
-          </div>
-        </article>
       </div>
     </section>
 
