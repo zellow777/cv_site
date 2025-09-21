@@ -150,20 +150,21 @@
       background: #ffffff;
       border-color: rgba(0,0,0,.06);
     }
-    .certs { margin-top: 32px; }
-    .certs-title { margin: 0 0 12px; font-size: 15px; text-transform: uppercase; letter-spacing: .3px; color: var(--muted); }
-    .certs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
-    .cert-card { display: flex; align-items: center; gap: 12px; padding: 14px 16px; border-radius: 18px; background: rgba(8,11,18,.65); border: 1px solid rgba(255,255,255,.08); box-shadow: 0 12px 28px rgba(8,11,18,.35); }
-    .cert-icon { width: 52px; height: 52px; border-radius: 16px; display: grid; place-items: center; color: #ffffff; }
-    .cert-icon svg { width: 28px; height: 28px; }
+    .certs { margin-top: 24px; }
+    .certs-title { margin: 0 0 10px; font-size: 14px; text-transform: uppercase; letter-spacing: .32px; color: var(--muted); }
+    .certs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+    .cert-card { display: flex; align-items: center; gap: 10px; padding: 12px 14px; border-radius: 16px; background: rgba(8,11,18,.6); border: 1px solid rgba(255,255,255,.08); box-shadow: 0 10px 22px rgba(8,11,18,.3); }
+    .cert-icon { width: 44px; height: 44px; border-radius: 14px; display: grid; place-items: center; color: #ffffff; }
+    .cert-icon svg { width: 24px; height: 24px; }
     .cert-icon.azure { background: linear-gradient(135deg, #2563eb, #38bdf8); }
     .cert-icon.data { background: linear-gradient(135deg, #7c3aed, #c026d3); }
     .cert-icon.ai { background: linear-gradient(135deg, #8b5cf6, #22d3ee); }
     .cert-icon.powerbi { background: linear-gradient(135deg, #f97316, #facc15); }
     .cert-icon.fabric { background: linear-gradient(135deg, #14b8a6, #06b6d4); }
-    .cert-meta { display: flex; flex-direction: column; gap: 4px; }
-    .cert-title { font-weight: 600; letter-spacing: .1px; color: var(--text); }
-    .cert-code { color: var(--muted); font-size: 13px; text-transform: uppercase; letter-spacing: .5px; }
+    .cert-icon.databricks { background: linear-gradient(135deg, #f97316, #ec4899); }
+    .cert-meta { display: flex; flex-direction: column; gap: 2px; }
+    .cert-title { font-weight: 600; letter-spacing: .08px; color: var(--text); font-size: 14px; }
+    .cert-code { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .45px; }
     @media (prefers-color-scheme: light) {
       :root:not([data-theme]) .cert-card { background: rgba(255,255,255,.92); border-color: rgba(15,23,42,.06); box-shadow: 0 12px 24px rgba(15,23,42,.15); }
     }
@@ -228,7 +229,7 @@
       .container { padding: 22px 18px 40px; }
       footer { flex-direction: column; gap: 4px; }
       .card { padding: 18px; border-radius: 16px; }
-      .certs-grid { grid-template-columns: 1fr; }
+      .certs-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .menu-toggle { width: 40px; height: 40px; }
     }
 
@@ -465,6 +466,42 @@
             <div class="cert-meta">
               <span class="cert-title">Fabric Data Engineer Associate</span>
               <span class="cert-code">DP-700</span>
+            </div>
+          </article>
+          <article class="cert-card">
+            <span class="cert-icon databricks">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6" opacity="0.6" />
+                <path d="M9.3 12.4 11.3 14.4 15 10.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+            <div class="cert-meta">
+              <span class="cert-title">Databricks Data Engineer Associate</span>
+              <span class="cert-code">DB-DEA</span>
+            </div>
+          </article>
+          <article class="cert-card">
+            <span class="cert-icon databricks">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6" opacity="0.6" />
+                <path d="M9.3 12.4 11.3 14.4 15 10.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+            <div class="cert-meta">
+              <span class="cert-title">Databricks Generative AI Associate</span>
+              <span class="cert-code">DB-GEN-AI</span>
+            </div>
+          </article>
+          <article class="cert-card">
+            <span class="cert-icon databricks">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6" opacity="0.6" />
+                <path d="M9.3 12.4 11.3 14.4 15 10.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+            <div class="cert-meta">
+              <span class="cert-title">Databricks Machine Learning Associate</span>
+              <span class="cert-code">DB-ML</span>
             </div>
           </article>
         </div>
