@@ -193,6 +193,18 @@
     }
     :root[data-theme="light"] .embed-card { background: rgba(255,255,255,.95); border-color: rgba(15,23,42,.08); box-shadow: 0 12px 24px rgba(15,23,42,.12); }
     :root[data-theme="light"] .embed-frame { background: rgba(15,23,42,.08); }
+    .schedule-card { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; align-items: stretch; padding: 28px; }
+    .schedule-info { display: flex; flex-direction: column; gap: 16px; }
+    .schedule-info p { margin: 0; color: var(--muted); line-height: 1.6; }
+    .schedule-cta { display: flex; flex-wrap: wrap; gap: 12px; }
+    .schedule-cta .btn { padding: 12px 18px; font-size: 14px; border-radius: 999px; }
+    .schedule-frame { min-height: 320px; border-radius: 18px; border: 1px solid rgba(148,163,184,0.22); background: rgba(15,23,42,0.4); }
+    @media (prefers-color-scheme: light) {
+      :root:not([data-theme]) .schedule-card { background: rgba(255,255,255,.95); }
+      :root:not([data-theme]) .schedule-frame { background: rgba(15,23,42,0.06); border-color: rgba(148,163,184,0.25); }
+    }
+    :root[data-theme="light"] .schedule-card { background: rgba(255,255,255,.95); }
+    :root[data-theme="light"] .schedule-frame { background: rgba(15,23,42,0.06); border-color: rgba(148,163,184,0.25); }
     #work .card { padding: 26px 28px; }
     #work .card ul { margin: 0; padding-left: 20px; display: grid; gap: 8px; }
     #skills .card { min-height: 120px; }
@@ -201,9 +213,13 @@
     @media (max-width: 900px){
       .portfolio-grid { grid-template-columns: 1fr; }
       #work .card { padding: 24px; }
+      .schedule-card { grid-template-columns: 1fr; }
     }
     @media (max-width: 600px){
       .embed-frame { aspect-ratio: 4/5; }
+      .schedule-card { padding: 22px; }
+      .schedule-frame { min-height: 280px; }
+      .schedule-cta { flex-direction: column; align-items: stretch; }
     }
     .card h3 { font-family: "Space Grotesk", "Inter", sans-serif; margin: 6px 0 8px; font-size: 18px; font-weight: 600; letter-spacing: .2px; }
     .small { color: var(--muted); font-size: 14px; }
@@ -281,6 +297,7 @@
           <a href="#work">Experience</a>
           <a href="#skills">Skills</a>
           <a href="#portfolio">Portfolio</a>
+          <a href="#book">Book a Call</a>
           <a href="#contact">Contact</a>
         </div>
       </nav>
@@ -540,6 +557,22 @@
           </div>
         </article>
       </div>
+    </section>
+
+    <section id="book">
+      <h2 class="section-title">Book a Call</h2>
+      <div class="card schedule-card">
+        <div class="schedule-info">
+          <h3 class="embed-title" style="margin:0">Free 30‑Minute Discovery</h3>
+          <p>Pick a slot that works for you and we’ll dive into your Fabric, Databricks, or BI challenges. I’ll review your current setup beforehand so we can spend the call on solutions, not status updates.</p>
+          <div class="schedule-cta">
+            <a class="btn primary" href="https://calendar.google.com/calendar/u/0/appointments/schedules/YOUR-SCHEDULE-ID" target="_blank" rel="noopener">Open Google Calendar</a>
+            <a class="btn" href="mailto:email@mihalyidavid.com?subject=Discovery%20Call%20Request">Prefer email?</a>
+          </div>
+        </div>
+        <iframe class="schedule-frame" src="https://calendar.google.com/calendar/embed?src=YOUR_CALENDAR_ID&ctz=Europe/Budapest" title="Google Calendar booking" loading="lazy"></iframe>
+      </div>
+      <p class="small" style="margin-top:12px">Replace the Calendar links with your appointment scheduling URL to activate the live booking flow.</p>
     </section>
 
     <section id="contact">
