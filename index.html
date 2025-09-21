@@ -69,9 +69,7 @@
     @media (max-width: 900px){ .hero { grid-template-columns: 1fr; } }
     h1 { font-size: clamp(28px, 5vw, 44px); line-height: 1.1; margin: 0 0 10px; }
     .subtitle { font-size: clamp(16px, 2.2vw, 20px); color: var(--muted); margin: 0 0 22px; }
-    .badges { display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0 26px; }
-    .badge { padding: 8px 12px; border: 1px solid rgba(255,255,255,.08); background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02)); border-radius: 999px; font-size: 13px; color: var(--text); }
-
+    
     .cta { display: flex; gap: 12px; flex-wrap: wrap; }
     .btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 14px; border-radius: 12px; border: 1px solid rgba(255,255,255,.08); background: var(--panel); color: var(--text); font-weight: 700; }
     .btn:hover { filter: brightness(1.05); transform: translateY(-1px); transition: .2s ease; }
@@ -110,12 +108,6 @@
       <div>
         <h1>Data Engineer building reliable, usable data platforms.</h1>
         <p class="subtitle">Microsoft Fabric • Azure • PySpark • Delta Lake • Power BI • Data Quality (Great Expectations)</p>
-        <div class="badges">
-          <span class="badge">Lakehouse: Bronze → Silver → Gold</span>
-          <span class="badge">Semantic Models (Direct Lake)</span>
-          <span class="badge">CI/CD & DevOps</span>
-          <span class="badge">Data Contracts & Validation</span>
-        </div>
         <div class="cta">
           <a class="btn primary" href="/cv-david-mihalyi.pdf" download>
             <!-- download icon -->
