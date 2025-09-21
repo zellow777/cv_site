@@ -1,11 +1,113 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My CV</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dávid Mihályi — Data Engineer & Consultant</title>
+  <meta name="description" content="Data Engineer and Technology Consultant specializing in Azure, Fabric, Python, and BI solutions." />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Dávid Mihályi — Data Engineer & Consultant" />
+  <meta property="og:description" content="Azure • Fabric • Python • BI • Data Engineering • AI" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://your-domain.example" />
+  <meta property="og:image" content="/og-image.png" />
+  <!-- Favicon (optional) -->
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="theme-color" content="#0ea5e9" />
 </head>
 <body>
-  <h1>My CV</h1>
-  <p><a href="CV_MihalyiDavid.pdf" target="_blank">Download my CV (PDF)</a></p>
+  <div class="container">
+    <header>
+      <div class="brand"><span class="dot"></span> <span>Dávid Mihályi</span></div>
+      <nav class="nav">
+        <a href="#work">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main class="hero">
+      <div>
+        <h1>Data Engineer & Technology Consultant</h1>
+        <p class="subtitle">Azure • Microsoft Fabric • Python • SQL • Power BI • AI/ML</p>
+        <div class="badges">
+          <span class="badge">Cloud Solutions (Azure, Fabric)</span>
+          <span class="badge">Business Intelligence</span>
+          <span class="badge">Machine Learning & AI</span>
+          <span class="badge">Data Engineering & ETL</span>
+        </div>
+        <div class="cta">
+          <a class="btn primary" href="/cv-david-mihalyi.pdf" download>Download CV</a>
+          <a class="btn" href="#work">View Experience</a>
+          <a class="btn" href="#contact">Get in Touch</a>
+        </div>
+      </div>
+    </main>
+
+    <section id="work">
+      <h2>Professional Experience</h2>
+      <div class="cardgrid">
+        <article class="card">
+          <h3>Technology Consultant — Ernst & Young</h3>
+          <p class="small">Jan 2025 – Present</p>
+          <p class="small">- Data preparation & transformation with Python<br>
+          - BI dashboards in Power BI<br>
+          - Architecture design for Azure cloud solutions<br>
+          - AI/ML model deployment (Azure AI Studio, TensorFlow)<br>
+          - Training & workshops for client teams</p>
+        </article>
+        <article class="card">
+          <h3>Data Engineer — Accenture</h3>
+          <p class="small">Mar 2023 – Dec 2024</p>
+          <p class="small">- Developed Python scripts for clean BI data<br>
+          - Built Power BI dashboards for decision-making<br>
+          - Cloud solution architecture (Azure)<br>
+          - SQL scripting & database optimization<br>
+          - POCs using Azure Data & AI services</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills & Certifications</h2>
+      <div class="cardgrid">
+        <div class="card">
+          <h3>Programming</h3>
+          <p class="small">Python, JavaScript, Java, SQL</p>
+        </div>
+        <div class="card">
+          <h3>Data & Analytics</h3>
+          <p class="small">Power BI, SAP SAC, Data Analysis, Data Engineering, Machine Learning, AI</p>
+        </div>
+        <div class="card">
+          <h3>Cloud & Platforms</h3>
+          <p class="small">Azure, Microsoft Fabric, Web Development, Database Management</p>
+        </div>
+      </div>
+      <p class="small" style="margin-top:12px">Certifications: AZ-900 · DP-900 · DP-203 · AI-900 · AI-102 · PL-300 · AZ-104 · AZ-305 · DP-700</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="card">
+        <p class="small">Open to data engineering and consulting opportunities. Let’s connect:</p>
+        <p>
+          <a href="mailto:mihalyi.david@icloud.com" class="btn">Email</a>
+          <a href="https://www.linkedin.com/in/davidmihalyi/" class="btn">LinkedIn</a>
+          <a href="https://github.com/your-handle" class="btn">GitHub</a>
+        </p>
+        <p class="small">Phone: +36-30-231-5705</p>
+      </div>
+    </section>
+
+    <footer>
+      <span>© <span id="year"></span> Dávid Mihályi</span>
+      <span class="small">Built with HTML/CSS • Hosted on GitHub Pages</span>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
