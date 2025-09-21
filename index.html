@@ -3,16 +3,19 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dávid Mihályi — Data Engineer</title>
+  <title>Mihályi Dávid — Data Engineer</title>
   <meta name="description" content="Data Engineer specialized in Microsoft Fabric, Azure, and reliable data platforms." />
   <!-- Open Graph -->
-  <meta property="og:title" content="Dávid Mihályi — Data Engineer" />
+  <meta property="og:title" content="Mihályi Dávid — Data Engineer" />
   <meta property="og:description" content="Microsoft Fabric • Azure • PySpark • Data Quality • Power BI" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://your-domain.example" />
   <meta property="og:image" content="/og-image.png" />
   <!-- Favicon (optional) -->
   <link rel="icon" href="/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <!-- Theme color -->
   <meta name="theme-color" content="#0ea5e9" />
   <!-- Schema.org JSON-LD -->
@@ -20,7 +23,7 @@
   {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "Dávid Mihályi",
+    "name": "Mihályi Dávid",
     "jobTitle": "Data Engineer",
     "url": "https://your-domain.example",
     "sameAs": [
@@ -56,25 +59,41 @@
     * { box-sizing: border-box; }
     html, body { height: 100%; }
     body {
-      margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      margin: 0; font-family: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
       background: radial-gradient(1200px 600px at 80% -10%, rgba(14,165,233,0.12), transparent),
                   radial-gradient(800px 400px at -10% 0%, rgba(34,197,94,0.10), transparent),
                   var(--bg);
       color: var(--text);
+      position: relative;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: clamp(160px, 16vw, 220px);
+      pointer-events: none;
+      z-index: 30;
+      backdrop-filter: blur(18px);
+      background: linear-gradient(to bottom, rgba(8,12,18,0.55), rgba(8,12,18,0.28), transparent 80%);
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,0.95), rgba(0,0,0,0.7), rgba(0,0,0,0));
     }
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
     .container { max-width: 1080px; margin: 0 auto; padding: 28px 32px 56px; }
-    header { position: sticky; top: 18px; z-index: 40; backdrop-filter: blur(18px); background: linear-gradient(120deg, rgba(10,12,18,0.92), rgba(10,14,22,0.78)); border: 1px solid rgba(148,163,184,0.08); border-radius: 18px; padding: 14px 18px; margin-bottom: 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; box-shadow: 0 18px 36px rgba(8,11,18,0.28); position: sticky; }
-    header::before { content: ""; position: absolute; inset: -1px; border-radius: inherit; border: 1px solid rgba(255,255,255,0.04); pointer-events: none; }
+    header { position: sticky; top: 18px; z-index: 40; backdrop-filter: blur(14px); background: linear-gradient(120deg, rgba(10,12,18,0.7), rgba(16,22,32,0.58)); border: 1px solid rgba(148,163,184,0.14); border-radius: 18px; padding: 12px 18px; margin-bottom: 28px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; box-shadow: 0 12px 28px rgba(8,11,18,0.22); position: sticky; }
+    header::before { content: ""; position: absolute; inset: -1px; border-radius: inherit; border: 1px solid rgba(255,255,255,0.05); pointer-events: none; }
     @media (prefers-color-scheme: light) {
-      :root:not([data-theme]) header { background: linear-gradient(120deg, rgba(255,255,255,0.96), rgba(244,247,252,0.92)); border-color: rgba(148,163,184,0.18); box-shadow: 0 18px 36px rgba(148,163,184,0.22); }
-      :root:not([data-theme]) header::before { border-color: rgba(15,23,42,0.05); }
+      :root:not([data-theme]) header { background: linear-gradient(120deg, rgba(255,255,255,0.9), rgba(244,247,252,0.86)); border-color: rgba(148,163,184,0.18); box-shadow: 0 12px 26px rgba(148,163,184,0.2); }
+      :root:not([data-theme]) header::before { border-color: rgba(15,23,42,0.06); }
       :root:not([data-theme]) .menu-toggle { background: rgba(241,245,249,0.85); border-color: rgba(148,163,184,0.35); }
+      :root:not([data-theme]) body::before { background: linear-gradient(to bottom, rgba(248,250,252,0.9), rgba(248,250,252,0.55), transparent 80%); backdrop-filter: blur(16px); }
     }
-    :root[data-theme="light"] header { background: linear-gradient(120deg, rgba(255,255,255,0.96), rgba(244,247,252,0.92)); border-color: rgba(148,163,184,0.18); box-shadow: 0 18px 36px rgba(148,163,184,0.22); }
-    :root[data-theme="light"] header::before { border-color: rgba(15,23,42,0.05); }
+    :root[data-theme="light"] header { background: linear-gradient(120deg, rgba(255,255,255,0.9), rgba(244,247,252,0.86)); border-color: rgba(148,163,184,0.18); box-shadow: 0 12px 26px rgba(148,163,184,0.2); }
+    :root[data-theme="light"] header::before { border-color: rgba(15,23,42,0.06); }
     :root[data-theme="light"] .menu-toggle { background: rgba(241,245,249,0.85); border-color: rgba(148,163,184,0.35); box-shadow: inset 0 1px 0 rgba(255,255,255,0.5); }
+    :root[data-theme="light"] body::before { background: linear-gradient(to bottom, rgba(248,250,252,0.9), rgba(248,250,252,0.55), transparent 80%); backdrop-filter: blur(16px); }
     .header-bar { display: flex; align-items: center; justify-content: space-between; gap: 16px; width: 100%; }
     .header-actions { display: flex; align-items: center; gap: 12px; }
     .nav { display: flex; align-items: center; justify-content: flex-end; gap: 20px; transition: max-height .3s ease; margin-left: auto; }
@@ -87,8 +106,13 @@
     .menu-toggle[aria-expanded="true"] .menu-icon { background: transparent; }
     .menu-toggle[aria-expanded="true"] .menu-icon::before { transform: translateY(6px) rotate(45deg); }
     .menu-toggle[aria-expanded="true"] .menu-icon::after { transform: translateY(-6px) rotate(-45deg); }
-    .brand { display: flex; align-items: center; gap: 12px; font-weight: 700; letter-spacing: .2px; }
-    .brand .dot { width: 10px; height: 10px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--accent-2)); box-shadow: 0 0 0 3px var(--ring); }
+    .brand { display: flex; align-items: center; gap: 14px; font-weight: 700; letter-spacing: .3px; font-size: clamp(24px, 2.6vw, 34px); text-transform: uppercase; font-family: "Space Grotesk", "Inter", sans-serif; }
+    .brand .dot { width: 14px; height: 14px; border-radius: 40%; background: linear-gradient(135deg, var(--accent), var(--accent-2)); box-shadow: 0 0 0 4px rgba(14,165,233,0.18); }
+    .brand-name { color: #ffffff; text-shadow: 0 12px 24px rgba(14,165,233,0.25); letter-spacing: .7px; font-variation-settings: "wght" 650; }
+    @media (prefers-color-scheme: light) {
+      :root:not([data-theme]) .brand-name { color: #0f172a; text-shadow: 0 6px 14px rgba(2,132,199,0.18); }
+    }
+    :root[data-theme="light"] .brand-name { color: #0f172a; text-shadow: 0 6px 14px rgba(2,132,199,0.18); }
     .nav a { font-weight: 600; color: var(--text); opacity: .8; padding: 6px 0; border-bottom: 2px solid transparent; transition: opacity .2s ease, border-color .2s ease; }
     .nav a:hover { opacity: 1; border-color: var(--accent); }
 
@@ -108,7 +132,7 @@
       .hero-copy { gap: 20px; }
       .cta { flex-direction: column; align-items: stretch; }
     }
-    h1 { font-size: clamp(28px, 5vw, 44px); line-height: 1.1; margin: 0 0 10px; }
+    h1 { font-family: "Space Grotesk", "Inter", sans-serif; font-weight: 600; font-size: clamp(28px, 5vw, 44px); line-height: 1.1; margin: 0 0 10px; }
     .subtitle { font-size: clamp(16px, 2.2vw, 20px); color: var(--muted); margin: 0 0 22px; }
     .btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 14px; border-radius: 12px; border: 1px solid rgba(255,255,255,.08); background: var(--panel); color: var(--text); font-weight: 700; }
     .btn:hover { filter: brightness(1.05); transform: translateY(-1px); transition: .2s ease; }
@@ -146,7 +170,7 @@
     :root[data-theme="light"] .cert-card { background: rgba(255,255,255,.92); border-color: rgba(15,23,42,.06); box-shadow: 0 12px 24px rgba(15,23,42,.15); }
     .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 24px; }
     .embed-card { background: rgba(8,11,18,.65); border-radius: 20px; border: 1px solid rgba(255,255,255,.08); padding: 22px; backdrop-filter: blur(8px); box-shadow: 0 12px 28px rgba(8,11,18,.35); display: flex; flex-direction: column; gap: 16px; }
-    .embed-title { margin: 0; font-size: 18px; }
+    .embed-title { margin: 0; font-size: 18px; font-family: "Space Grotesk", "Inter", sans-serif; font-weight: 600; letter-spacing: .2px; }
     .embed-desc { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.5; }
     .embed-frame { border: none; border-radius: 14px; width: 100%; aspect-ratio: 16/10; background: rgba(15,23,42,.4); }
     .embed-placeholder { display: grid; place-items: center; height: 100%; color: var(--muted); font-size: 13px; padding: 12px; text-align: center; }
@@ -180,13 +204,13 @@
     @media (max-width: 600px){
       .embed-frame { aspect-ratio: 4/5; }
     }
-    .card h3 { margin: 6px 0 8px; font-size: 18px; }
+    .card h3 { font-family: "Space Grotesk", "Inter", sans-serif; margin: 6px 0 8px; font-size: 18px; font-weight: 600; letter-spacing: .2px; }
     .small { color: var(--muted); font-size: 14px; }
 
     main, section { scroll-margin-top: 96px; }
     section { margin: 72px 0; }
     @media (max-width: 600px){ section { margin: 48px 0; } }
-    .section-title { font-size: 20px; letter-spacing: .3px; margin: 0 0 12px; }
+    .section-title { font-family: "Space Grotesk", "Inter", sans-serif; font-size: 20px; letter-spacing: .32px; margin: 0 0 12px; text-transform: uppercase; }
 
     footer { margin: 72px 0 16px; color: var(--muted); font-size: 14px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
     @media (max-width: 820px){
@@ -211,12 +235,30 @@
     /* Toggle */
     .toggle {
       border: none;
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      padding: 6px 14px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
       border-radius: 999px;
-      font-size: 13px;
-      font-weight: 700;
-      box-shadow: 0 8px 20px rgba(14,165,233,0.35);
+      font-size: 18px;
+      font-weight: 600;
+      transition: transform .2s ease, filter .2s ease, box-shadow .2s ease;
+      cursor: pointer;
+      background: rgba(15,23,42,0.6);
+      color: var(--text);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
+    }
+    .toggle:hover { transform: translateY(-1px); filter: brightness(1.05); }
+    .toggle.light-active {
+      background: linear-gradient(135deg, #fcd34d, #f97316);
+      color: #1f2937;
+      box-shadow: 0 10px 22px rgba(249,115,22,0.35);
+    }
+    .toggle.dark-active {
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: #e2e8f0;
+      box-shadow: 0 10px 24px rgba(15,23,42,0.4);
     }
     .hidden { display:none; }
   </style>
@@ -225,7 +267,7 @@
   <div class="container">
     <header>
       <div class="header-bar">
-        <div class="brand"><span class="dot"></span> <span>Dávid Mihályi</span></div>
+        <div class="brand"><span class="dot"></span> <span class="brand-name">Mihályi Dávid</span></div>
         <div class="header-actions">
           <button id="modeBtn" class="toggle" aria-label="Toggle theme">🌗 Theme</button>
           <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Toggle navigation">
@@ -476,7 +518,7 @@
     </section>
 
     <footer>
-      <span>© <span id="year"></span> Dávid Mihályi</span>
+      <span>© <span id="year"></span> Mihályi Dávid</span>
       <span class="small">Hosted on GitHub Pages</span>
     </footer>
   </div>
@@ -492,20 +534,35 @@
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     const saved = localStorage.getItem('theme');
 
+    function renderToggle(theme){
+      if(!btn) return;
+      const isDark = theme === 'dark';
+      btn.classList.toggle('dark-active', isDark);
+      btn.classList.toggle('light-active', !isDark);
+      const icon = isDark ? '🌙' : '☀️';
+      btn.textContent = icon;
+      const nextMode = isDark ? 'light' : 'dark';
+      const ariaLabel = `Switch to ${nextMode} mode`;
+      btn.setAttribute('aria-label', ariaLabel);
+      btn.setAttribute('title', ariaLabel);
+    }
+
     function apply(theme){
       document.documentElement.style.removeProperty('filter');
       document.documentElement.dataset.theme = theme;
-      btn.style.color = theme === 'dark' ? '#000000' : '#ffffff';
+      renderToggle(theme);
       localStorage.setItem('theme', theme);
     }
 
     let current = saved || (prefersDark ? 'dark' : 'light');
     apply(current);
 
-    btn.addEventListener('click', () => {
-      current = current === 'dark' ? 'light' : 'dark';
-      apply(current);
-    });
+    if(btn){
+      btn.addEventListener('click', () => {
+        current = current === 'dark' ? 'light' : 'dark';
+        apply(current);
+      });
+    }
 
     function collapseNav(){
       if(!menuBtn || !siteNav) return;
